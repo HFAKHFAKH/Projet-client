@@ -1,6 +1,6 @@
 import { AffichehelloService } from './../affichehello.service';
 import { Component, OnInit } from '@angular/core';
-
+import {MenuItem} from 'primeng/api';
 
 @Component({
   selector: 'app-home',
@@ -10,15 +10,24 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   result: string;
-
-  constructor(private affichehelloService: AffichehelloService) {
-
-  }
+  items: MenuItem[];
+  constructor(private affichehelloService: AffichehelloService) {  }
 
   ngOnInit() {
-    this.afficheResult();
-
-  }
+  /*  this.afficheResult();
+    this.items = [{
+     // label: 'Société',
+      items: [
+          {label: 'Société', icon: 'pi pi-fw pi-home'}
+              ]
+  },
+  {
+    //  label: 'Salarié',
+      items: [
+          {label: 'Salarié', icon: 'pi pi-fw pi-user'}
+            ]
+  }];*/
+}
 
   afficheResult() {
     this.affichehelloService.getAfficheHello().subscribe(

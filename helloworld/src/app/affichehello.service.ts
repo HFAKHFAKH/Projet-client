@@ -9,6 +9,6 @@ export class AffichehelloService {
   constructor(private http: HttpClient) { }
 
   getAfficheHello(): Observable<string> {
-    return this.http.get<string>('http://localhost:8080/projet/ping');
+    return this.http.get<string>('http://localhost:8080/projet/affiche');
   }
 }
